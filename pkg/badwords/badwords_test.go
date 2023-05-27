@@ -20,8 +20,8 @@ func TestBadWordsFilter(t *testing.T) {
 		t.Errorf("Testing did not initialize word list")
 	}
 
-	testString := "Eating very delicous apples today"
-	want := "Eating very delicous *****s today"
+	testString := "Eating very delicous apples, bananas, and carrots today"
+	want := "Eating very delicous *****s, ******s, and ******s today"
 	got := testingList.Filter(testString)
 	if want != got {
 		t.Errorf("Words not filtered, got: %s", got)

@@ -33,6 +33,7 @@ func (l *List) Filter(s string) (filtered string) {
 			}
 			re := regexp.MustCompile(`(?i)` + word)
 			filtered = re.ReplaceAllString(s, replacer)
+			s = filtered
 		}
 	}
 	return
